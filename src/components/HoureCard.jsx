@@ -21,7 +21,7 @@ const HoureCard = ({ subState }) => {
 
       <div className='bg-secondary py-4 px-12 rounded-3xl text-white '>
         <div className='flex flex-col justify-center items-center gap-6'>
-          <div className="group-hover:animate-[spin_.2s_ease-in-out]">
+          <div className="group-hover:animate-[spin_.3s_ease-in-out]">
             <img
               src={direction} alt=""
               style={{ transform: `rotate(${subState.wind_degree}deg)` }}

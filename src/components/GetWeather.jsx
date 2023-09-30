@@ -17,7 +17,7 @@ import { Spinner } from '@material-tailwind/react';
 const GetWeather = () => {
 
   const [state, setState] = useState(null);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [subLoading, setSubLoading] = useState(false);
   // const [error, setError] = useState(null);
   const [ip, setIp] = useState('');
@@ -58,7 +58,7 @@ const GetWeather = () => {
 
   const forecastWeather = (country = (latitude && longitude) ? `${latitude} , ${longitude}` : ip) => {
     setSubLoading(true);
-    setLoading(true);
+    // setLoading(true);
     const options = {
       method: 'GET',
       url: import.meta.env.VITE_REACT_APP_API_URL,
@@ -77,13 +77,13 @@ const GetWeather = () => {
       .then(response => {
         console.log(response.data);
         setState(response.data);
-        setLoading(false);
+        // setLoading(false);
         setSubLoading(false);
       })
       .catch(error => {
         // setError(error);
         console.log(error)
-        setLoading(false);
+        // setLoading(false);
         setSubLoading(false);
       });
   };

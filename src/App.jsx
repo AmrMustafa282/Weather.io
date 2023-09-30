@@ -1,5 +1,5 @@
 
-import GetWeather from "./components/getWeather";
+import GetWeather from "./components/GetWeather";
 
 
 
