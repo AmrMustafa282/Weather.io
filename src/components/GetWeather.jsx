@@ -61,15 +61,15 @@ const GetWeather = () => {
     setLoading(true);
     const options = {
       method: 'GET',
-      url: 'https://weatherapi-com.p.rapidapi.com/forecast.json',
+      url: import.meta.env.VITE_REACT_APP_API_URL,
       params: {
         q: country,
         days: '3',
 
       },
       headers: {
-        'X-RapidAPI-Key': 'f90b5cabc4mshba4083b6215e42fp192d94jsn69d3aa620c11',
-        'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+        'X-RapidAPI-Key': import.meta.env.VITE_REACT_APP_KEY,
+        'X-RapidAPI-Host': import.meta.env.VITE_REACT_APP_HOST
       }
     };
     axios
