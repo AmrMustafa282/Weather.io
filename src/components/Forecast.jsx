@@ -17,20 +17,19 @@ const Forecast = ({ state }) => {
 
 
   return (
-    <div className="bg-secondary p-8 rounded-3xl text-white">
+    <div className="bg-secondary p-6 rounded-3xl text-white">
       <h1 className='text-2xl mb-4'>3 Days Forecast</h1>
-      <ul className='flex flex-col pr-12 gap-0 text-gray-500'>
+      <ul className='flex flex-col  gap-0 text-gray-500'>
         {forecast.map((d) => (
-          <li key={d.date} className='flex justify-between items-center'>
+          <li key={d.date} className='grid grid-cols-3 place-items-center'>
 
 
             <div className="flex items-center justify-between font-semibold  ">
             
-                <img src={state.current.condition.icon} alt="state-icon"  />
+                <img src={d.day.condition.icon} alt="state-icon"  />
               
-              <div className='text-white'>{state.current.temp_c}&deg;</div>
+              <div className='text-white'>{d.day.avgtemp_c}&deg;</div>
             </div>
-
 
             <div>
               {getTimes(d.date_epoch).day}{" "}{getTimes(d.date_epoch).monthName}
