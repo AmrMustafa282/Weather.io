@@ -26,9 +26,9 @@ const Forecast = ({ state }) => {
 
             <div className="flex items-center justify-between font-semibold  ">
             
-                <img src={state.current.condition.icon} alt="state-icon"  />
+                <img src={day.condition.icon} alt="state-icon"  />
               
-              <div className='text-white'>{state.current.temp_c}&deg;</div>
+              <div className='text-white'>{day.avgtemp_c}&deg;</div>
             </div>
 
 
